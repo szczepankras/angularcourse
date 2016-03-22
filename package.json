@@ -24,10 +24,13 @@
     "babel-preset-stage-2": "^6.5.0",
     "css-loader": "^0.23.1",
     "style-loader": "^0.13.0",
+    "file-loader": "^0.8.5",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "angular": "^1.5.2",
+    "angular-ui-router": "^0.2.18",
     "bootstrap": "^3.3.6"
   }
 }
