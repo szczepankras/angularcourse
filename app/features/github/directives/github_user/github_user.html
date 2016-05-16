@@ -1,0 +1,21 @@
+<div class="col-sm-4">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span>{{github.User.name}}</span> 
+        </div>
+        <div class="panel-body">
+            <img ng-src="{{github.User.avatar_url}}" 
+                 class="img-responsive">
+            </img>
+        </div>
+        <div class="list-group">
+            <li class="list-group-item"><strong>Login: </strong>{{github.User.login}}</li>
+            <li class="list-group-item"><strong>Email: </strong>{{github.User.email}}</li>
+            <li class="list-group-item text-center">
+                <a ng-href="{{github.User.html_url}}" target="_blank" class="btn btn-success btn-block btn-sm">
+                    Go to profile
+                </a>
+            </li>
+        </div>
+    </div>
+</div>
