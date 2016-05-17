@@ -1,6 +1,13 @@
 <div class="col-md-4">
     <table class="table">
         <tr ng-repeat="item in github.items">
-            <td>{{item.$value}}</td>
+            <td>{{item.comment}}</td>
         </tr>
 </table>
+<input type="text" ng-model="github.comment"></input>
+   <span class="input-group-btn">
+        <button 
+          class="btn btn-info" 
+          type="button" 
+          ng-click="github.addComment()">Add comment</button>
+</span>

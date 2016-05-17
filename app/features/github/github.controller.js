@@ -3,6 +3,7 @@ export default class GitHubController {
   constructor(GitHubService, $stateParams, $firebaseArray) {
     
     this.selectedUser = $stateParams.user
+    this.comment = "";
     
     GitHubService.getUser(this.selectedUser)
       .then(this.handleGetUserSuccess.bind(this));
@@ -25,7 +26,12 @@ export default class GitHubController {
     console.log(this.Repos);
   }
   
-  
+  addComment(){
+    this.items.$add({ comment: this.comment }).then(function(ref) {
+      var id = ref.key();
+      console.log("added record with id " + id);
+      });
+  }
 
 
   /*constructor($http) {
